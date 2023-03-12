@@ -20,7 +20,6 @@ font = pygame.font.SysFont('forte', 20)
 canvas = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption('Mario')
 
-
 class Topscore:
     def __init__(self):
         self.high_score = 0
@@ -30,7 +29,6 @@ class Topscore:
         return self.high_score
 
 topscore = Topscore()
-
 
 class Dragon:
     dragon_velocity = 10
@@ -59,7 +57,6 @@ class Dragon:
         elif self.down:
             self.dragon_img_rect.top += self.dragon_velocity
 
-
 class Flames:
     flames_velocity = 20
 
@@ -76,7 +73,6 @@ class Flames:
 
         if self.flames_img_rect.left > 0:
             self.flames_img_rect.left -= self.flames_velocity
-
 
 class Mario:
     velocity = 10
@@ -104,7 +100,6 @@ class Mario:
         if self.down:
             self.mario_img_rect.bottom += 10
 
-
 def game_over():
     pygame.mixer.music.stop()
     music = pygame.mixer.Sound('mario_dies.wav')
@@ -127,7 +122,6 @@ def game_over():
                 game_loop()
         pygame.display.update()
 
-
 def start_game():
     canvas.fill(BLACK)
     start_img = pygame.image.load('start.png')
@@ -145,7 +139,6 @@ def start_game():
                     sys.exit()
                 game_loop()
         pygame.display.update()
-
 
 def check_level(SCORE):
     global LEVEL
@@ -165,10 +158,6 @@ def check_level(SCORE):
         cactus_img_rect.bottom = 200
         fire_img_rect.top = WINDOW_HEIGHT - 200
         LEVEL = 4
-
-
-
-
 
 def game_loop():
     while True:
@@ -243,6 +232,5 @@ def game_loop():
                         mario.mario_score = SCORE
             pygame.display.update()
             CLOCK.tick(FPS)
-
 
 start_game()
