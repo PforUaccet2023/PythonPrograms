@@ -1,0 +1,4 @@
+FPS: 
+Frame rate is the measurement of how quickly a number of frames appears within a second, which is why it's also called FPS (frames per second). 
+Motion pictures, TV broadcasts, streaming video content, and even smartphones use the standard frame rate of 24fps.
+https://www.pygame.org/docs/ref/surface.html#:~:text=pygame.Surface.get_rect,rectangular%20area%20of%20the%20Surface
